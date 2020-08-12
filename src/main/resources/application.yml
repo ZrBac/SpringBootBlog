@@ -1,0 +1,18 @@
+server:
+  port: 8887
+
+spring:
+  thymeleaf:
+    mode: HTML
+  profiles:
+    active: dev
+
+mybatis:
+  type-aliases-package: fun.zrbac.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+comment.avatar: /images/avatar.png
+message.avatar: /images/avatar.png
