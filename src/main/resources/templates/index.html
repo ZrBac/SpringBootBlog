@@ -78,12 +78,12 @@
             <div align="center">QQ</div>
         </div>
 
-        <div class="m-font-size-text" align="center">欢迎来到我的客栈，我是一颗星，夜空中最亮的那颗</div>
+        <div class="m-font-size-text" align="center">Welcome, my friend.</div>
         <hr style="width: 40%">
-        <h5 class="m-font-size-text-init-title m-margin-top-large">“大圣，此去欲何?”</h5>
-        <h5 class="m-font-size-text-init-title">“踏南天，碎凌霄”</h5>
-        <h5 class="m-font-size-text-init-title">“若一去不回……”</h5>
-        <h5 class="m-font-size-text-init-title">“便一去不回”</h5>
+        <h5 class="m-font-size-text-init-title m-margin-top-large"></h5>
+        <h5 class="m-font-size-text-init-title">“悠然时闲云野鹤”</h5>
+        <h5 class="m-font-size-text-init-title">“无畏时螳臂当车”</h5>
+        <h5 class="m-font-size-text-init-title"></h5>
 
         <div id="waypoint" class="ui m-margin-top-large" align="center">
             <a href="#" th:href="@{/}" class="ui circular icon button m-opacity-small m-item item m-mobile-hide m-index-btn" th:classappend="${n==1} ? 'active'"><i class="home icon"></i>首页</a>
@@ -265,7 +265,7 @@
         </div>
         <div class="ui inverted section divider"></div>
         <div style="color: #F08047;margin-top: -18px" class="ui inverted m-text-thin m-text-spaced">我的客栈已营业：<span id="htmer_time" class="item m-text-thin"></span> (*๓´╰╯`๓)</div>
-        <a rel="nofollow" href="http://www.beian.miit.gov.cn" target="_blank">赣ICP备20004408号-1</a>
+        <a rel="nofollow" href="http://www.beian.miit.gov.cn" target="_blank">鄂ICP备20013870号-1</a>
     </div>
     </div>
 
@@ -313,7 +313,7 @@
     }
     function setTime() {
         /*此处为网站的创建时间*/
-        var create_time = Math.round(new Date(Date.UTC(2020, 01, 25, 15, 15, 15)).getTime() / 1000);
+        var create_time = Math.round(new Date(Date.UTC(2020, 04, 11, 11, 11, 11)).getTime() / 1000);
         var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
         currentTime = secondToDate((timestamp - create_time));
         currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'

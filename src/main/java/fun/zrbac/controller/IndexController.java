@@ -2,10 +2,12 @@ package fun.zrbac.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import fun.zrbac.entity.Comment;
 import fun.zrbac.query.DetailedBlog;
 import fun.zrbac.query.FirstPageBlog;
 import fun.zrbac.query.RecommendBlog;
 import fun.zrbac.service.BlogService;
+import fun.zrbac.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,6 +24,9 @@ public class IndexController {
 
     @Autowired
     private BlogService blogService;
+
+    @Autowired
+    private CommentService commentService;
 
     //分页查询博客列表
     @GetMapping("/")
@@ -68,8 +73,9 @@ public class IndexController {
     @GetMapping("/blog/{id}")
     public String blog(@PathVariable Long id, Model model) {
         DetailedBlog detailedBlog = blogService.getDetailedBlog(id);
+        List<Comment> comments = commentService.listCommentByBlogId(id);
         model.addAttribute("blog", detailedBlog);
-
+        model.addAttribute("comments", comments);
 
         return "blog";
     }

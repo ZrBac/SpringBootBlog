@@ -61,5 +61,6 @@ public interface BlogDao {
     //根据TypeId查询博客列表，显示在分类页面
     List<FirstPageBlog> getByTypeId(Long typeId);
 
+    List<BlogQuery> searchByTitleOrTypeOrRecommend(SearchBlog searchBlog);
 }
 

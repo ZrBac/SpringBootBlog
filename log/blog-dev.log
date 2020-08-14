@@ -1,69 +1,257 @@
-2020-08-12 19:05:20.610  INFO 17040 --- [restartedMain] fun.zrbac.SpringbootApplication          : Starting SpringbootApplication on DESKTOP-4S1F4CH with PID 17040 (G:\IntelliJCode\springbootblog\target\classes started by ZAC in G:\IntelliJCode\springbootblog)
-2020-08-12 19:05:20.614  INFO 17040 --- [restartedMain] fun.zrbac.SpringbootApplication          : The following profiles are active: dev
-2020-08-12 19:05:20.650  INFO 17040 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-08-12 19:05:20.651  INFO 17040 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-08-12 19:05:22.065  INFO 17040 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
-2020-08-12 19:05:22.074  INFO 17040 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-08-12 19:05:22.074  INFO 17040 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2020-08-12 19:05:22.184  INFO 17040 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-08-12 19:05:22.184  INFO 17040 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1533 ms
-2020-08-12 19:05:22.811  INFO 17040 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-08-12 19:05:22.893  INFO 17040 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-08-12 19:05:23.190  INFO 17040 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-08-12 19:05:23.231  INFO 17040 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
-2020-08-12 19:05:23.240  INFO 17040 --- [restartedMain] fun.zrbac.SpringbootApplication          : Started SpringbootApplication in 3.198 seconds (JVM running for 4.432)
-2020-08-12 19:05:46.547  INFO 17040 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-08-12 19:05:46.548  INFO 17040 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-08-12 19:05:46.554  INFO 17040 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2020-08-12 19:05:46.581  INFO 17040 --- [http-nio-8887-exec-1] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.index', args=[{}, 1, {}]}
-2020-08-12 19:05:46.596  INFO 17040 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-08-12 19:05:46.717  INFO 17040 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-08-12 19:05:46.778  INFO 17040 --- [http-nio-8887-exec-1] fun.zrbac.aspect.LogAspect               : Result : index
-2020-08-12 19:06:13.516  INFO 17040 --- [http-nio-8887-exec-4] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
-2020-08-12 19:06:13.529  INFO 17040 --- [http-nio-8887-exec-4] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
-2020-08-12 19:06:28.454  INFO 17040 --- [http-nio-8887-exec-5] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/blog/2', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blog', args=[2, {}]}
-2020-08-12 19:06:28.513  INFO 17040 --- [http-nio-8887-exec-5] fun.zrbac.aspect.LogAspect               : Result : blog
-2020-08-12 19:06:49.639  INFO 17040 --- [http-nio-8887-exec-6] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
-2020-08-12 19:06:49.642  INFO 17040 --- [http-nio-8887-exec-6] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
-2020-08-12 19:06:49.744  INFO 17040 --- [http-nio-8887-exec-3] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/comments/2', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.CommentController.comments', args=[2, {}]}
-2020-08-12 19:06:49.777  INFO 17040 --- [http-nio-8887-exec-3] fun.zrbac.aspect.LogAspect               : Result : blog :: commentList
-2020-08-12 19:08:56.983  INFO 17040 --- [http-nio-8887-exec-5] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/about', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.AboutShowController.about', args=[]}
-2020-08-12 19:08:56.985  INFO 17040 --- [http-nio-8887-exec-5] fun.zrbac.aspect.LogAspect               : Result : about
-2020-08-12 19:09:17.979  INFO 17040 --- [http-nio-8887-exec-6] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
-2020-08-12 19:09:17.982  INFO 17040 --- [http-nio-8887-exec-6] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
-2020-08-12 19:13:25.096  INFO 17040 --- [http-nio-8887-exec-4] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/picture', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.PictureShowController.pictures', args=[{}]}
-2020-08-12 19:13:25.101  INFO 17040 --- [http-nio-8887-exec-4] fun.zrbac.aspect.LogAspect               : Result : picture
-2020-08-12 19:13:57.182  INFO 17040 --- [http-nio-8887-exec-1] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
-2020-08-12 19:13:57.185  INFO 17040 --- [http-nio-8887-exec-1] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
-2020-08-12 19:16:24.911  INFO 17040 --- [http-nio-8887-exec-8] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/friends', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.FriendShowController.friends', args=[{}]}
-2020-08-12 19:16:24.916  INFO 17040 --- [http-nio-8887-exec-8] fun.zrbac.aspect.LogAspect               : Result : friends
-2020-08-12 19:16:56.954  INFO 17040 --- [http-nio-8887-exec-4] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
-2020-08-12 19:16:56.956  INFO 17040 --- [http-nio-8887-exec-4] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
-2020-08-12 19:17:10.521  INFO 17040 --- [http-nio-8887-exec-5] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.TypeShowController.types', args=[1, -1, {}]}
-2020-08-12 19:17:10.540  INFO 17040 --- [http-nio-8887-exec-5] fun.zrbac.aspect.LogAspect               : Result : types
-2020-08-12 19:17:31.538  INFO 17040 --- [http-nio-8887-exec-9] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
-2020-08-12 19:17:31.547  INFO 17040 --- [http-nio-8887-exec-9] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
-2020-08-12 19:17:45.654  INFO 17040 --- [http-nio-8887-exec-7] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/archives', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.ArchiveShowController.archive', args=[{}]}
-2020-08-12 19:17:45.658  INFO 17040 --- [http-nio-8887-exec-7] fun.zrbac.aspect.LogAspect               : Result : archives
-2020-08-12 19:17:52.701  INFO 17040 --- [http-nio-8887-exec-10] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/music', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.MusicShowController.about', args=[]}
-2020-08-12 19:17:52.703  INFO 17040 --- [http-nio-8887-exec-10] fun.zrbac.aspect.LogAspect               : Result : music
-2020-08-12 19:18:06.674  INFO 17040 --- [http-nio-8887-exec-6] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
-2020-08-12 19:18:06.677  INFO 17040 --- [http-nio-8887-exec-6] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
-2020-08-12 19:20:05.544  INFO 17040 --- [http-nio-8887-exec-7] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
-2020-08-12 19:20:05.547  INFO 17040 --- [http-nio-8887-exec-7] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
-2020-08-12 19:20:14.805  INFO 17040 --- [http-nio-8887-exec-2] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
-2020-08-12 19:20:14.808  INFO 17040 --- [http-nio-8887-exec-2] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
-2020-08-12 19:20:19.585  INFO 17040 --- [http-nio-8887-exec-5] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
-2020-08-12 19:20:19.621  INFO 17040 --- [http-nio-8887-exec-5] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
-2020-08-12 19:20:21.509  INFO 17040 --- [http-nio-8887-exec-8] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
-2020-08-12 19:20:21.511  INFO 17040 --- [http-nio-8887-exec-8] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
-2020-08-12 19:20:23.108  INFO 17040 --- [http-nio-8887-exec-1] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
-2020-08-12 19:20:23.110  INFO 17040 --- [http-nio-8887-exec-1] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
-2020-08-12 19:20:33.033  INFO 17040 --- [http-nio-8887-exec-4] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
-2020-08-12 19:20:33.036  INFO 17040 --- [http-nio-8887-exec-4] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
-2020-08-12 19:20:34.483  INFO 17040 --- [http-nio-8887-exec-7] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
-2020-08-12 19:20:34.486  INFO 17040 --- [http-nio-8887-exec-7] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
-2020-08-12 19:20:54.959  INFO 17040 --- [http-nio-8887-exec-6] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.index', args=[{}, 1, {}]}
-2020-08-12 19:20:54.965  INFO 17040 --- [http-nio-8887-exec-6] fun.zrbac.aspect.LogAspect               : Result : index
-2020-08-12 19:20:55.082  INFO 17040 --- [http-nio-8887-exec-6] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8887/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
-2020-08-12 19:20:55.084  INFO 17040 --- [http-nio-8887-exec-6] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 09:59:20.851  INFO 2732 --- [restartedMain] fun.zrbac.SpringbootApplication          : Starting SpringbootApplication on DESKTOP-4S1F4CH with PID 2732 (G:\IntelliJCode\springbootblog\target\classes started by ZAC in G:\IntelliJCode\springbootblog)
+2020-08-14 09:59:20.855  INFO 2732 --- [restartedMain] fun.zrbac.SpringbootApplication          : The following profiles are active: dev
+2020-08-14 09:59:20.886  INFO 2732 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-14 09:59:20.886  INFO 2732 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-14 09:59:22.115  INFO 2732 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2020-08-14 09:59:22.122  INFO 2732 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-14 09:59:22.122  INFO 2732 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-08-14 09:59:22.200  INFO 2732 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-14 09:59:22.200  INFO 2732 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1313 ms
+2020-08-14 09:59:22.978  INFO 2732 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-14 09:59:23.146  INFO 2732 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-08-14 09:59:24.179  INFO 2732 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-14 09:59:24.208  INFO 2732 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2020-08-14 09:59:24.216  INFO 2732 --- [restartedMain] fun.zrbac.SpringbootApplication          : Started SpringbootApplication in 3.877 seconds (JVM running for 4.793)
+2020-08-14 09:59:58.087  INFO 2732 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-14 09:59:58.088  INFO 2732 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-14 09:59:58.094  INFO 2732 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-08-14 09:59:58.119  INFO 2732 --- [http-nio-8888-exec-1] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.index', args=[{}, 1, {}]}
+2020-08-14 09:59:58.133  INFO 2732 --- [http-nio-8888-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-14 09:59:58.259  INFO 2732 --- [http-nio-8888-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-14 09:59:58.351  INFO 2732 --- [http-nio-8888-exec-1] fun.zrbac.aspect.LogAspect               : Result : index
+2020-08-14 09:59:59.340  INFO 2732 --- [http-nio-8888-exec-3] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 09:59:59.402  INFO 2732 --- [http-nio-8888-exec-3] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 10:00:12.440  INFO 2732 --- [http-nio-8888-exec-3] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 10:00:12.443  INFO 2732 --- [http-nio-8888-exec-3] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 10:00:17.263  INFO 2732 --- [http-nio-8888-exec-6] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 10:00:17.267  INFO 2732 --- [http-nio-8888-exec-6] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 10:00:19.689  INFO 2732 --- [http-nio-8888-exec-10] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 10:00:19.692  INFO 2732 --- [http-nio-8888-exec-10] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 10:00:35.088  WARN 2732 --- [http-nio-8888-exec-1] o.springframework.validation.DataBinder  : Skipping URI variable 'id' because request contains bind value with same name.
+2020-08-14 10:00:35.216  INFO 2732 --- [http-nio-8888-exec-9] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 10:00:35.219  INFO 2732 --- [http-nio-8888-exec-9] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 10:00:52.638  INFO 2732 --- [http-nio-8888-exec-10] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 10:00:52.641  INFO 2732 --- [http-nio-8888-exec-10] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 10:03:36.139  INFO 2732 --- [http-nio-8888-exec-5] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 10:03:36.142  INFO 2732 --- [http-nio-8888-exec-5] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 10:03:38.071  INFO 2732 --- [http-nio-8888-exec-3] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 10:03:38.074  INFO 2732 --- [http-nio-8888-exec-3] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 10:03:40.742  INFO 2732 --- [http-nio-8888-exec-1] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 10:03:40.745  INFO 2732 --- [http-nio-8888-exec-1] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 10:03:44.180  WARN 2732 --- [http-nio-8888-exec-3] o.springframework.validation.DataBinder  : Skipping URI variable 'id' because request contains bind value with same name.
+2020-08-14 10:03:44.298  INFO 2732 --- [http-nio-8888-exec-4] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 10:03:44.301  INFO 2732 --- [http-nio-8888-exec-4] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 10:03:48.337  INFO 2732 --- [http-nio-8888-exec-9] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 10:03:48.340  INFO 2732 --- [http-nio-8888-exec-9] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 10:03:49.925  WARN 2732 --- [http-nio-8888-exec-2] o.springframework.validation.DataBinder  : Skipping URI variable 'id' because request contains bind value with same name.
+2020-08-14 10:03:50.043  INFO 2732 --- [http-nio-8888-exec-5] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 10:03:50.045  INFO 2732 --- [http-nio-8888-exec-5] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 10:04:03.615  INFO 2732 --- [http-nio-8888-exec-1] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 10:04:03.618  INFO 2732 --- [http-nio-8888-exec-1] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 10:04:17.365  WARN 2732 --- [http-nio-8888-exec-5] o.springframework.validation.DataBinder  : Skipping URI variable 'id' because request contains bind value with same name.
+2020-08-14 10:04:17.469  INFO 2732 --- [http-nio-8888-exec-4] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 10:04:17.471  INFO 2732 --- [http-nio-8888-exec-4] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 10:04:22.667  INFO 2732 --- [http-nio-8888-exec-2] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 10:04:22.669  INFO 2732 --- [http-nio-8888-exec-2] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 10:04:26.747  WARN 2732 --- [http-nio-8888-exec-6] o.springframework.validation.DataBinder  : Skipping URI variable 'id' because request contains bind value with same name.
+2020-08-14 10:04:26.851  INFO 2732 --- [http-nio-8888-exec-7] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 10:04:26.853  INFO 2732 --- [http-nio-8888-exec-7] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 10:04:29.405  INFO 2732 --- [http-nio-8888-exec-3] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 10:04:29.407  INFO 2732 --- [http-nio-8888-exec-3] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 10:04:31.442  WARN 2732 --- [http-nio-8888-exec-10] o.springframework.validation.DataBinder  : Skipping URI variable 'id' because request contains bind value with same name.
+2020-08-14 10:04:31.599  INFO 2732 --- [http-nio-8888-exec-1] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 10:04:31.601  INFO 2732 --- [http-nio-8888-exec-1] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:16:24.495  INFO 17516 --- [restartedMain] fun.zrbac.SpringbootApplication          : Starting SpringbootApplication on DESKTOP-4S1F4CH with PID 17516 (G:\IntelliJCode\springbootblog\target\classes started by ZAC in G:\IntelliJCode\springbootblog)
+2020-08-14 11:16:24.498  INFO 17516 --- [restartedMain] fun.zrbac.SpringbootApplication          : The following profiles are active: dev
+2020-08-14 11:16:24.534  INFO 17516 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-14 11:16:24.535  INFO 17516 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-14 11:16:25.584  INFO 17516 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2020-08-14 11:16:25.590  INFO 17516 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-14 11:16:25.590  INFO 17516 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-08-14 11:16:25.653  INFO 17516 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-14 11:16:25.653  INFO 17516 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1118 ms
+2020-08-14 11:16:26.200  INFO 17516 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-14 11:16:26.270  INFO 17516 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-08-14 11:16:26.534  INFO 17516 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-14 11:16:26.563  INFO 17516 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2020-08-14 11:16:26.571  INFO 17516 --- [restartedMain] fun.zrbac.SpringbootApplication          : Started SpringbootApplication in 2.422 seconds (JVM running for 3.149)
+2020-08-14 11:16:27.806  INFO 17516 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-14 11:16:27.806  INFO 17516 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-14 11:16:27.814  INFO 17516 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-08-14 11:16:32.696  INFO 17516 --- [http-nio-8888-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-14 11:16:32.783  INFO 17516 --- [http-nio-8888-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-14 11:16:32.941  INFO 17516 --- [http-nio-8888-exec-1] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:16:32.953  INFO 17516 --- [http-nio-8888-exec-1] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:16:35.434  INFO 17516 --- [http-nio-8888-exec-9] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:16:35.436  INFO 17516 --- [http-nio-8888-exec-9] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:16:36.783  INFO 17516 --- [http-nio-8888-exec-6] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:16:36.786  INFO 17516 --- [http-nio-8888-exec-6] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:16:55.504  WARN 17516 --- [http-nio-8888-exec-4] o.springframework.validation.DataBinder  : Skipping URI variable 'id' because request contains bind value with same name.
+2020-08-14 11:16:55.633  INFO 17516 --- [http-nio-8888-exec-5] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:16:55.635  INFO 17516 --- [http-nio-8888-exec-5] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:18:14.151  INFO 6840 --- [restartedMain] fun.zrbac.SpringbootApplication          : Starting SpringbootApplication on DESKTOP-4S1F4CH with PID 6840 (G:\IntelliJCode\springbootblog\target\classes started by ZAC in G:\IntelliJCode\springbootblog)
+2020-08-14 11:18:14.153  INFO 6840 --- [restartedMain] fun.zrbac.SpringbootApplication          : The following profiles are active: dev
+2020-08-14 11:18:14.188  INFO 6840 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-14 11:18:14.189  INFO 6840 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-14 11:18:15.126  INFO 6840 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2020-08-14 11:18:15.132  INFO 6840 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-14 11:18:15.132  INFO 6840 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-08-14 11:18:15.191  INFO 6840 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-14 11:18:15.192  INFO 6840 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1003 ms
+2020-08-14 11:18:15.687  INFO 6840 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-14 11:18:15.756  INFO 6840 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-08-14 11:18:16.007  INFO 6840 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-14 11:18:16.033  INFO 6840 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2020-08-14 11:18:16.041  INFO 6840 --- [restartedMain] fun.zrbac.SpringbootApplication          : Started SpringbootApplication in 2.197 seconds (JVM running for 2.875)
+2020-08-14 11:18:20.173  INFO 6840 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-14 11:18:20.174  INFO 6840 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-14 11:18:20.181  INFO 6840 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-08-14 11:18:30.341  INFO 6840 --- [http-nio-8888-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-14 11:18:30.427  INFO 6840 --- [http-nio-8888-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-14 11:18:30.570  INFO 6840 --- [http-nio-8888-exec-10] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:18:30.580  INFO 6840 --- [http-nio-8888-exec-10] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:18:34.474  INFO 6840 --- [http-nio-8888-exec-9] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:18:34.476  INFO 6840 --- [http-nio-8888-exec-9] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:18:35.589  INFO 6840 --- [http-nio-8888-exec-6] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:18:35.592  INFO 6840 --- [http-nio-8888-exec-6] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:19:09.675  INFO 6840 --- [http-nio-8888-exec-9] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:19:09.679  INFO 6840 --- [http-nio-8888-exec-9] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:19:11.989  INFO 6840 --- [http-nio-8888-exec-2] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:19:11.992  INFO 6840 --- [http-nio-8888-exec-2] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:21:05.535  INFO 17196 --- [restartedMain] fun.zrbac.SpringbootApplication          : Starting SpringbootApplication on DESKTOP-4S1F4CH with PID 17196 (G:\IntelliJCode\springbootblog\target\classes started by ZAC in G:\IntelliJCode\springbootblog)
+2020-08-14 11:21:05.537  INFO 17196 --- [restartedMain] fun.zrbac.SpringbootApplication          : The following profiles are active: dev
+2020-08-14 11:21:05.581  INFO 17196 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-14 11:21:05.582  INFO 17196 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-14 11:21:06.550  INFO 17196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2020-08-14 11:21:06.556  INFO 17196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-14 11:21:06.556  INFO 17196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-08-14 11:21:06.614  INFO 17196 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-14 11:21:06.614  INFO 17196 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1032 ms
+2020-08-14 11:21:07.131  INFO 17196 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-14 11:21:07.204  INFO 17196 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-08-14 11:21:07.534  INFO 17196 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-14 11:21:07.565  INFO 17196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2020-08-14 11:21:07.574  INFO 17196 --- [restartedMain] fun.zrbac.SpringbootApplication          : Started SpringbootApplication in 2.363 seconds (JVM running for 3.043)
+2020-08-14 11:21:11.928  INFO 17196 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-14 11:21:11.928  INFO 17196 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-14 11:21:11.934  INFO 17196 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-08-14 11:21:11.963  INFO 17196 --- [http-nio-8888-exec-1] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.index', args=[{}, 1, {}]}
+2020-08-14 11:21:11.978  INFO 17196 --- [http-nio-8888-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-14 11:21:12.069  INFO 17196 --- [http-nio-8888-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-14 11:21:12.123  INFO 17196 --- [http-nio-8888-exec-1] fun.zrbac.aspect.LogAspect               : Result : index
+2020-08-14 11:21:12.548  INFO 17196 --- [http-nio-8888-exec-3] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:21:12.552  INFO 17196 --- [http-nio-8888-exec-3] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:21:22.756  INFO 17196 --- [http-nio-8888-exec-2] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:21:22.759  INFO 17196 --- [http-nio-8888-exec-2] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:21:25.306  INFO 17196 --- [http-nio-8888-exec-5] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:21:25.309  INFO 17196 --- [http-nio-8888-exec-5] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:21:26.709  INFO 17196 --- [http-nio-8888-exec-8] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:21:26.712  INFO 17196 --- [http-nio-8888-exec-8] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:46:09.638  INFO 16428 --- [restartedMain] fun.zrbac.SpringbootApplication          : Starting SpringbootApplication on DESKTOP-4S1F4CH with PID 16428 (G:\IntelliJCode\springbootblog\target\classes started by ZAC in G:\IntelliJCode\springbootblog)
+2020-08-14 11:46:09.640  INFO 16428 --- [restartedMain] fun.zrbac.SpringbootApplication          : The following profiles are active: dev
+2020-08-14 11:46:09.676  INFO 16428 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-14 11:46:09.676  INFO 16428 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-14 11:46:10.597  INFO 16428 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2020-08-14 11:46:10.603  INFO 16428 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-14 11:46:10.604  INFO 16428 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-08-14 11:46:10.660  INFO 16428 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-14 11:46:10.660  INFO 16428 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 984 ms
+2020-08-14 11:46:11.148  INFO 16428 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-14 11:46:11.216  INFO 16428 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-08-14 11:46:11.456  INFO 16428 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-14 11:46:11.482  INFO 16428 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2020-08-14 11:46:11.489  INFO 16428 --- [restartedMain] fun.zrbac.SpringbootApplication          : Started SpringbootApplication in 2.161 seconds (JVM running for 2.845)
+2020-08-14 11:46:20.600  INFO 16428 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-14 11:46:20.600  INFO 16428 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-14 11:46:20.607  INFO 16428 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-08-14 11:46:25.600  INFO 16428 --- [http-nio-8888-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-14 11:46:25.686  INFO 16428 --- [http-nio-8888-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-14 11:46:25.843  INFO 16428 --- [http-nio-8888-exec-1] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:46:25.851  INFO 16428 --- [http-nio-8888-exec-1] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:46:28.259  INFO 16428 --- [http-nio-8888-exec-4] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:46:28.261  INFO 16428 --- [http-nio-8888-exec-4] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:46:29.711  INFO 16428 --- [http-nio-8888-exec-7] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:46:29.714  INFO 16428 --- [http-nio-8888-exec-7] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:46:40.127  INFO 16428 --- [http-nio-8888-exec-3] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:46:40.130  INFO 16428 --- [http-nio-8888-exec-3] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:48:28.888  INFO 16428 --- [http-nio-8888-exec-4] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:48:28.891  INFO 16428 --- [http-nio-8888-exec-4] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:48:30.930  WARN 16428 --- [http-nio-8888-exec-2] o.springframework.validation.DataBinder  : Skipping URI variable 'id' because request contains bind value with same name.
+2020-08-14 11:48:31.073  INFO 16428 --- [http-nio-8888-exec-9] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:48:31.075  INFO 16428 --- [http-nio-8888-exec-9] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:48:32.933  INFO 16428 --- [http-nio-8888-exec-7] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:48:32.936  INFO 16428 --- [http-nio-8888-exec-7] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:48:35.953  WARN 16428 --- [http-nio-8888-exec-9] o.springframework.validation.DataBinder  : Skipping URI variable 'id' because request contains bind value with same name.
+2020-08-14 11:48:36.083  INFO 16428 --- [http-nio-8888-exec-3] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:48:36.086  INFO 16428 --- [http-nio-8888-exec-3] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:48:38.152  INFO 16428 --- [http-nio-8888-exec-10] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:48:38.154  INFO 16428 --- [http-nio-8888-exec-10] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:48:40.577  WARN 16428 --- [http-nio-8888-exec-3] o.springframework.validation.DataBinder  : Skipping URI variable 'id' because request contains bind value with same name.
+2020-08-14 11:48:40.713  INFO 16428 --- [http-nio-8888-exec-2] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:48:40.717  INFO 16428 --- [http-nio-8888-exec-2] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:48:42.275  INFO 16428 --- [http-nio-8888-exec-6] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:48:42.277  INFO 16428 --- [http-nio-8888-exec-6] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:48:44.041  WARN 16428 --- [http-nio-8888-exec-8] o.springframework.validation.DataBinder  : Skipping URI variable 'id' because request contains bind value with same name.
+2020-08-14 11:48:44.175  INFO 16428 --- [http-nio-8888-exec-5] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:48:44.178  INFO 16428 --- [http-nio-8888-exec-5] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:48:45.021  INFO 16428 --- [http-nio-8888-exec-3] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:48:45.024  INFO 16428 --- [http-nio-8888-exec-3] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:48:57.227  INFO 16428 --- [http-nio-8888-exec-10] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:48:57.229  INFO 16428 --- [http-nio-8888-exec-10] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:48:59.761  INFO 16428 --- [http-nio-8888-exec-8] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:48:59.763  INFO 16428 --- [http-nio-8888-exec-8] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:49:01.787  WARN 16428 --- [http-nio-8888-exec-10] o.springframework.validation.DataBinder  : Skipping URI variable 'id' because request contains bind value with same name.
+2020-08-14 11:49:01.891  INFO 16428 --- [http-nio-8888-exec-4] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:49:01.895  INFO 16428 --- [http-nio-8888-exec-4] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:49:08.008  INFO 16428 --- [http-nio-8888-exec-5] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:49:08.010  INFO 16428 --- [http-nio-8888-exec-5] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:49:19.951  INFO 16428 --- [http-nio-8888-exec-9] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.index', args=[{}, 1, {}]}
+2020-08-14 11:49:19.956  INFO 16428 --- [http-nio-8888-exec-9] fun.zrbac.aspect.LogAspect               : Result : index
+2020-08-14 11:49:20.515  INFO 16428 --- [http-nio-8888-exec-8] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:49:20.518  INFO 16428 --- [http-nio-8888-exec-8] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:49:21.830  INFO 16428 --- [http-nio-8888-exec-9] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.TypeShowController.types', args=[1, -1, {}]}
+2020-08-14 11:49:21.834  INFO 16428 --- [http-nio-8888-exec-9] fun.zrbac.aspect.LogAspect               : Result : types
+2020-08-14 11:49:21.966  INFO 16428 --- [http-nio-8888-exec-4] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:49:21.969  INFO 16428 --- [http-nio-8888-exec-4] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:49:23.732  INFO 16428 --- [http-nio-8888-exec-6] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/types/124', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.TypeShowController.types', args=[1, 124, {}]}
+2020-08-14 11:49:23.734  INFO 16428 --- [http-nio-8888-exec-6] fun.zrbac.aspect.LogAspect               : Result : types
+2020-08-14 11:49:23.857  INFO 16428 --- [http-nio-8888-exec-2] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:49:23.861  INFO 16428 --- [http-nio-8888-exec-2] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:49:24.819  INFO 16428 --- [http-nio-8888-exec-4] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/types/2', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.TypeShowController.types', args=[1, 2, {}]}
+2020-08-14 11:49:24.822  INFO 16428 --- [http-nio-8888-exec-4] fun.zrbac.aspect.LogAspect               : Result : types
+2020-08-14 11:49:24.934  INFO 16428 --- [http-nio-8888-exec-10] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:49:24.937  INFO 16428 --- [http-nio-8888-exec-10] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:49:28.049  INFO 16428 --- [http-nio-8888-exec-3] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/types/124', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.TypeShowController.types', args=[1, 124, {}]}
+2020-08-14 11:49:28.053  INFO 16428 --- [http-nio-8888-exec-3] fun.zrbac.aspect.LogAspect               : Result : types
+2020-08-14 11:49:28.175  INFO 16428 --- [http-nio-8888-exec-9] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:49:28.177  INFO 16428 --- [http-nio-8888-exec-9] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:49:29.034  INFO 16428 --- [http-nio-8888-exec-7] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/types/2', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.TypeShowController.types', args=[1, 2, {}]}
+2020-08-14 11:49:29.039  INFO 16428 --- [http-nio-8888-exec-7] fun.zrbac.aspect.LogAspect               : Result : types
+2020-08-14 11:49:29.155  INFO 16428 --- [http-nio-8888-exec-6] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:49:29.158  INFO 16428 --- [http-nio-8888-exec-6] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:49:33.394  INFO 16428 --- [http-nio-8888-exec-5] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.index', args=[{}, 1, {}]}
+2020-08-14 11:49:33.398  INFO 16428 --- [http-nio-8888-exec-5] fun.zrbac.aspect.LogAspect               : Result : index
+2020-08-14 11:49:33.520  INFO 16428 --- [http-nio-8888-exec-7] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:49:33.523  INFO 16428 --- [http-nio-8888-exec-7] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:49:42.049  INFO 16428 --- [http-nio-8888-exec-9] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/archives', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.ArchiveShowController.archive', args=[{}]}
+2020-08-14 11:49:42.053  INFO 16428 --- [http-nio-8888-exec-9] fun.zrbac.aspect.LogAspect               : Result : archives
+2020-08-14 11:49:42.137  INFO 16428 --- [http-nio-8888-exec-2] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:49:42.139  INFO 16428 --- [http-nio-8888-exec-2] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:49:44.857  INFO 16428 --- [http-nio-8888-exec-7] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/music', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.MusicShowController.about', args=[]}
+2020-08-14 11:49:44.860  INFO 16428 --- [http-nio-8888-exec-7] fun.zrbac.aspect.LogAspect               : Result : music
+2020-08-14 11:49:55.378  INFO 16428 --- [http-nio-8888-exec-1] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.index', args=[{}, 1, {}]}
+2020-08-14 11:49:55.382  INFO 16428 --- [http-nio-8888-exec-1] fun.zrbac.aspect.LogAspect               : Result : index
+2020-08-14 11:49:55.478  INFO 16428 --- [http-nio-8888-exec-1] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:49:55.481  INFO 16428 --- [http-nio-8888-exec-1] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:49:57.242  INFO 16428 --- [http-nio-8888-exec-6] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/picture', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.PictureShowController.pictures', args=[{}]}
+2020-08-14 11:49:57.246  INFO 16428 --- [http-nio-8888-exec-6] fun.zrbac.aspect.LogAspect               : Result : picture
+2020-08-14 11:49:57.388  INFO 16428 --- [http-nio-8888-exec-10] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:49:57.390  INFO 16428 --- [http-nio-8888-exec-10] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:49:59.622  INFO 16428 --- [http-nio-8888-exec-6] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/about', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.AboutShowController.about', args=[]}
+2020-08-14 11:49:59.624  INFO 16428 --- [http-nio-8888-exec-6] fun.zrbac.aspect.LogAspect               : Result : about
+2020-08-14 11:49:59.782  INFO 16428 --- [http-nio-8888-exec-2] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:49:59.785  INFO 16428 --- [http-nio-8888-exec-2] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage
+2020-08-14 11:50:39.545  INFO 16428 --- [http-nio-8888-exec-8] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/picture', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.PictureShowController.pictures', args=[{}]}
+2020-08-14 11:50:39.546  INFO 16428 --- [http-nio-8888-exec-8] fun.zrbac.aspect.LogAspect               : Result : picture
+2020-08-14 11:50:39.666  INFO 16428 --- [http-nio-8888-exec-1] fun.zrbac.aspect.LogAspect               : Request : RequestLog{url='http://localhost:8888/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='fun.zrbac.controller.IndexController.blogMessage', args=[{}]}
+2020-08-14 11:50:39.669  INFO 16428 --- [http-nio-8888-exec-1] fun.zrbac.aspect.LogAspect               : Result : index :: blogMessage

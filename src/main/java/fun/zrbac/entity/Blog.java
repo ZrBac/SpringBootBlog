@@ -6,33 +6,39 @@ import java.util.Date;
 import java.util.List;
 
 public class Blog {
-    private long id;
+
+    private Long id;
     private String title;
     private String content;
     private String firstPicture;
     private String flag;
     private Integer views;
+
     private Integer commentCount;
+
     private boolean appreciation;
     private boolean shareStatement;
     private boolean commentabled;
     private boolean published;
     private boolean recommend;
-    private Date creatTime;
+    private Date createTime;
     private Date updateTime;
-    private String description;
 
-    private Type type;
-    private User user;
     private Long typeId;
     private Long userId;
+    private String description;
+    private Type type;
+    private User user;
     private List<Comment> comments = new ArrayList<>();
 
-    public long getId() {
+    public Blog() {
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -124,12 +130,12 @@ public class Blog {
         this.recommend = recommend;
     }
 
-    public Date getCreatTime() {
-        return creatTime;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreatTime(Date creatTime) {
-        this.creatTime = creatTime;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
     public Date getUpdateTime() {
@@ -138,6 +144,22 @@ public class Blog {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public Long getTypeId() {
+        return typeId;
+    }
+
+    public void setTypeId(Long typeId) {
+        this.typeId = typeId;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public String getDescription() {
@@ -164,22 +186,6 @@ public class Blog {
         this.user = user;
     }
 
-    public Long getTypeId() {
-        return typeId;
-    }
-
-    public void setTypeId(Long typeId) {
-        this.typeId = typeId;
-    }
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
     public List<Comment> getComments() {
         return comments;
     }
@@ -203,13 +209,13 @@ public class Blog {
                 ", commentabled=" + commentabled +
                 ", published=" + published +
                 ", recommend=" + recommend +
-                ", creatTime=" + creatTime +
+                ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
+                ", typeId=" + typeId +
+                ", userId=" + userId +
                 ", description='" + description + '\'' +
                 ", type=" + type +
                 ", user=" + user +
-                ", typeId=" + typeId +
-                ", userId=" + userId +
                 ", comments=" + comments +
                 '}';
     }

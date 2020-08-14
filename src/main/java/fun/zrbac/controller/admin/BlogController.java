@@ -29,18 +29,6 @@ public class BlogController {
     @Autowired
     private TypeService typeService;
 
-    //博客列表
-    @RequestMapping("/blogs")
-    public String blogs(Model model, @RequestParam(defaultValue = "1",value = "pageNum") Integer pageNum){
-        //按照排序字段 倒序 排序
-        String orderBy = "update_time desc";
-        PageHelper.startPage(pageNum,10,orderBy);
-        List<BlogQuery> list = blogService.getAllBlog();
-        PageInfo<BlogQuery> pageInfo = new PageInfo<BlogQuery>(list);
-        model.addAttribute("types",typeService.getAllType());
-        model.addAttribute("pageInfo",pageInfo);
-        return "admin/blogs";
-    }
 
     //跳转博客新增页面
     @GetMapping("/blogs/input")
@@ -67,8 +55,20 @@ public class BlogController {
         }else {
             attributes.addFlashAttribute("message", "新增成功");
         }
-        System.out.println("dao zhe le");
         return "redirect:/admin/blogs";
+    }
+
+    //博客列表
+    @RequestMapping("/blogs")
+    public String blogs(Model model, @RequestParam(defaultValue = "1",value = "pageNum") Integer pageNum){
+        //按照排序字段 倒序 排序
+        String orderBy = "update_time desc";
+        PageHelper.startPage(pageNum,10,orderBy);
+        List<BlogQuery> list = blogService.getAllBlog();
+        PageInfo<BlogQuery> pageInfo = new PageInfo<BlogQuery>(list);
+        model.addAttribute("types",typeService.getAllType());
+        model.addAttribute("pageInfo",pageInfo);
+        return "admin/blogs";
     }
 
     //    删除文章

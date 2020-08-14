@@ -32,7 +32,11 @@ public class TypeServiceImpl implements TypeService {
         return typeDao.getAllType();
     }
 
-    @Transactional
+    @Override
+    public List<Type> getAllTypeAndBlog() {
+        return typeDao.getAllTypeAndBlog();
+    }
+
     @Override
     public Type getTypeByName(String name) {
         return typeDao.getTypeByName(name);
@@ -50,9 +54,5 @@ public class TypeServiceImpl implements TypeService {
         typeDao.deleteType(id);
     }
 
-    @Transactional
-    @Override
-    public List<Type> getAllTypeAndBlog() {
-        return typeDao.getAllTypeAndBlog();
-    }
+
 }
