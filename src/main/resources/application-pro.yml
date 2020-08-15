@@ -2,9 +2,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/myblog?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&serverTimezone=GMT%2B8
+    url: jdbc:mysql://182.92.162.91:3306/myblog?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&serverTimezone=GMT%2B8
     username: root
-    password: 123456
+    password: zyw12530
 
 logging:
   level:

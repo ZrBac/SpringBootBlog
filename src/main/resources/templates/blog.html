@@ -484,10 +484,9 @@ h5,h6{font-size:1em;}
         <div class="nine wide column">
           <ui class="list">
             <li>作者：<span th:text="${blog.nickname}">ZrBac</span><a href="#" th:href="@{/about}" target="_blank">（联系作者）</a></li>
-            <li>发表时间：<span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd HH:mm')}">2020-01-02 09:08</span></li>
+            <li>发表时间：<span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd HH:mm')}">2020-04-11 07:18</span></li>
             <li>版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）</li>
             <li>转载声明：如果是转载栈主转载的文章，请附上原文链接</li>
-            <li>公众号转载：请在文末添加作者公众号二维码（公众号二维码见右边，欢迎关注）</li>
           </ui>
         </div>
 
@@ -505,7 +504,8 @@ h5,h6{font-size:1em;}
             <h3 class="ui dividing header">评论</h3>
             <div class="comment" th:each="comment : ${comments}">
               <a class="avatar">
-                <img src="https://unsplash.it/100/100?image=1005" th:src="@{${comment.avatar}}">
+                <img src="../static/images/me.jpg" th:if="${comment.adminComment}"
+                     th:src="@{${comment.avatar}}">
               </a>
               <div class="content">
                 <a class="author" >
@@ -529,12 +529,13 @@ h5,h6{font-size:1em;}
               <div class="comments" th:if="${#arrays.length(comment.replyComments)}>0">
                 <div class="comment" th:each="reply : ${comment.replyComments}">
                   <a class="avatar">
-                    <img src="https://unsplash.it/100/100?image=1005" th:src="@{${reply.avatar}}">
+                    <img src="../static/images/me.jpg" th:src="@{${reply.avatar}}">
                   </a>
                   <div class="content">
                     <a class="author" >
                       <span th:text="${reply.nickname}">小红</span>
                       <div class="ui mini basic teal left pointing label m-padded-mini" th:if="${reply.adminComment}">栈主</div>
+
                       &nbsp;<span th:text="|@ ${reply.parentNickname}|" class="m-teal">@ 小白</span>
                     </a>
                     <div class="metadata">
@@ -721,7 +722,7 @@ h5,h6{font-size:1em;}
     }
     function setTime() {
         /*此处为网站的创建时间*/
-        var create_time = Math.round(new Date(Date.UTC(2020, 01, 25, 15, 15, 15)).getTime() / 1000);
+        var create_time = Math.round(new Date(Date.UTC(2020, 07, 11, 11, 11, 11)).getTime() / 1000);
         var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
         currentTime = secondToDate((timestamp - create_time));
         currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'

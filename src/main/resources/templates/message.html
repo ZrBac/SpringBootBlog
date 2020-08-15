@@ -100,7 +100,7 @@
                       <h3 class="ui dividing header">留言</h3>
                       <div class="comment" th:each="message : ${messages}">
                           <a class="avatar">
-                              <img src="../static/image/me.jpg" th:src="@{${message.avatar}}">
+                              <img src="../static/images/me.jpg" th:src="@{${message.avatar}}">
                           </a>
                           <div class="content">
                               <a class="author">
@@ -120,7 +120,7 @@
                           <div class="comments" th:if="${#arrays.length(message.replyMessages)}>0">
                               <div class="comment" th:each="reply : ${message.replyMessages}">
                                   <a class="avatar">
-                                      <img src="../static/image/me.jpg" th:src="@{${reply.avatar}}">
+                                      <img src="../static/images/me.jpg" th:src="@{${reply.avatar}}">
                                   </a>
                                   <div class="content">
                                       <a class="author">
@@ -274,7 +274,7 @@
     }
     function setTime() {
         /*此处为网站的创建时间*/
-        var create_time = Math.round(new Date(Date.UTC(2020, 01, 25, 15, 15, 15)).getTime() / 1000);
+        var create_time = Math.round(new Date(Date.UTC(2020, 07, 11, 11, 11, 11)).getTime() / 1000);
         var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
         currentTime = secondToDate((timestamp - create_time));
         currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'
