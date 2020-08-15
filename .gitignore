@@ -4,6 +4,7 @@ log/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+src/main/resources/application-pro.yml
 
 ### STS ###
 .apt_generated
