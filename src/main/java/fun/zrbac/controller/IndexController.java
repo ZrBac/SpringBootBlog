@@ -33,11 +33,11 @@ public class IndexController {
     public String index(Model model, @RequestParam(defaultValue = "1", value = "pageNum") Integer pageNum, RedirectAttributes attributes) {
         PageHelper.startPage(pageNum,10);
         List<FirstPageBlog> allFirstPageBlog = blogService.getAllFirstPageBlog();
-        List<RecommendBlog> recommendBlog = blogService.getRecommendedBlog();
+        List<RecommendBlog> recommendedBlog = blogService.getRecommendedBlog();
 
         PageInfo<FirstPageBlog> pageInfo = new PageInfo<>(allFirstPageBlog);
         model.addAttribute("pageInfo", pageInfo);
-        model.addAttribute("recommendBlogs", recommendBlog);
+        model.addAttribute("recommendedBlogs", recommendedBlog);
         return "index";
     }
 
