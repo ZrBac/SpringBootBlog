@@ -19,6 +19,9 @@ public class Message {
     private Message parentMessage;
     private String parentNickname;
 
+    public Message() {
+    }
+
     public Long getId() {
         return id;
     }
@@ -75,14 +78,6 @@ public class Message {
         this.parentMessageId = parentMessageId;
     }
 
-    public boolean isAdminMessage() {
-        return adminMessage;
-    }
-
-    public void setAdminMessage(boolean adminMessage) {
-        this.adminMessage = adminMessage;
-    }
-
     public List<Message> getReplyMessages() {
         return replyMessages;
     }
@@ -105,6 +100,14 @@ public class Message {
 
     public void setParentNickname(String parentNickname) {
         this.parentNickname = parentNickname;
+    }
+
+    public boolean isAdminMessage() {
+        return adminMessage;
+    }
+
+    public void setAdminMessage(boolean adminMessage) {
+        this.adminMessage = adminMessage;
     }
 
     @Override

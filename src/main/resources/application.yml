@@ -5,7 +5,7 @@ spring:
   thymeleaf:
     mode: HTML
   profiles:
-    active: pro
+    active: dev
 
 mybatis:
   type-aliases-package: fun.zrbac.entity
